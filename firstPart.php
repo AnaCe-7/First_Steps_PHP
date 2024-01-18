@@ -16,11 +16,9 @@ $bool1 = true;
 echo "• Boolean representing 1: " . ($bool1 ? 'true' : 'false') . "<br>";
 
 $bool0 = false;
-echo "• Boolean representing 0: " . ($bool0 ? 'true' : 'false') . "<br>";
-echo "<br>";
+echo "• Boolean representing 0: " . ($bool0 ? 'true' : 'false') . "<br>" . "<br>";
 
-echo "• Arrays:". "<br>";
-echo "- A snacks array". "<br>";
+echo "• Arrays:". "<br>" . "- A snacks array" . "<br>";
 $snacksArray = [
     "pistachios" => "70",
     "almonds" => "60",
@@ -31,14 +29,12 @@ $snacksArray = [
 print_r($snacksArray);
 echo "<br>";
 
-echo "- An array of fruits". "<br>";
+echo "- An array of fruits" . "<br>";
 $fruitsArray = ["mango", "watermelon", "banana", "peach", "apple"];
 print_r($fruitsArray);
-echo "<br>";
-echo "<br>";
+echo "<br>" . "<br>";
 
-echo "• PHP Object:" . "<br>" . "Classes and objects are the two main aspects of object-oriented programming." . "<br>" . "A class is a template for objects, and an object is an instance of a class." ."<br>";
-echo "<br>";
+echo "• PHP Object:" . "<br>" . "Classes and objects are the two main aspects of object-oriented programming." . "<br>" . "A class is a template for objects, and an object is an instance of a class." ."<br>" ."<br>";
 
 class MusicalInstrument {
     public $instrument;
@@ -62,12 +58,11 @@ echo "<br>";
 
 $Trumpet = new MusicalInstrument("trumpet", "brass");
 var_dump($Trumpet);
-echo "<br>";
+echo "<br>" . "<br>";
 
 // echo $guitar->message() . "<br>";
 // echo $drum->message() . "<br>";
 // echo $trumpet->message() . "<br>";
-echo "<br>";
 
 $nullValue = null;
 echo "• "; var_dump($nullValue);
@@ -90,6 +85,19 @@ echo "<br>";
 
 $Ravenclaw = true;
 var_dump($Ravenclaw);
+echo "<br>" . "<br>";
+
+// Average
+$promedio = (8 + 9.5 + 9 + 10 + 8) / 5;
+var_dump($promedio);
+echo "<br>";  
+
+$nombre_completo = $nombre . " " . $apellido; 
+var_dump($nombre_completo);
+echo "<br>";
+
+$presento_examen = (bool) 1;
+var_dump($presento_examen);
 echo "<br>";
 
 ?>
