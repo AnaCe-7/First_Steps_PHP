@@ -36,4 +36,23 @@ $nullValue = null;
 var_dump($nullValue);
 echo "is a special value that can be assigned to a variable to indicate that it has no value or does not point to anything. " . "<br>";
 
+// B)
+echo " <p> ★ What type of data are the following variables? </p>";
+// Easy
+$nombre = "Luna";
+var_dump($nombre);
+echo "<br>"; 
+
+$apellido = "Lovegood";
+var_dump($apellido);
+echo "<br>"; 
+
+$edad = 42;
+var_dump($edad);
+echo "<br>"; 
+
+$Ravenclaw = true;
+var_dump($Ravenclaw);
+echo "<br>";
+
 ?>
