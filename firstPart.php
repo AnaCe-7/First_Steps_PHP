@@ -1,23 +1,26 @@
 <?php
 
 // A)
-echo " <p> ★ VARIABLES </p>";
+echo " <h4> ★ Variables </h4>";
 
 $name = "Cecilia";
-echo "My second name is " . $name . "<br>";
+echo "• My second name is " . $name . "<br>";
 
 $luckyNumber = 7;
-echo "My favorite number is " . $luckyNumber . "<br>";
+echo "• My favorite number is " . $luckyNumber . "<br>";
 
 $decimal = 6.25;
-echo "A decimal number: " . $decimal . "<br>";
+echo "• A decimal number: " . $decimal . "<br>";
 
-$trueBool1 = true;
-echo "Boolean representing 1: " . ($trueBool1 ? 'true' : 'false') . "<br>";
+$bool1 = true;
+echo "• Boolean representing 1: " . ($bool1 ? 'true' : 'false') . "<br>";
 
-$trueBool0 = false;
-echo "Boolean representing 0: " . ($trueBool0 ? 'true' : 'false') . "<br>";
+$bool0 = false;
+echo "• Boolean representing 0: " . ($bool0 ? 'true' : 'false') . "<br>";
+echo "<br>";
 
+echo "• Arrays:". "<br>";
+echo "- A snacks array". "<br>";
 $snacksArray = [
     "pistachios" => "70",
     "almonds" => "60",
@@ -28,16 +31,50 @@ $snacksArray = [
 print_r($snacksArray);
 echo "<br>";
 
+echo "- An array of fruits". "<br>";
 $fruitsArray = ["mango", "watermelon", "banana", "peach", "apple"];
 print_r($fruitsArray);
 echo "<br>";
+echo "<br>";
+
+echo "• PHP Object:" . "<br>" . "Classes and objects are the two main aspects of object-oriented programming." . "<br>" . "A class is a template for objects, and an object is an instance of a class." ."<br>";
+echo "<br>";
+
+class MusicalInstrument {
+    public $instrument;
+    public $classification;
+    public function __construct($instrument, $classification) {
+        $this->instrument = $instrument;
+        $this->classification = $classification;
+    }
+    public function message() {
+        return "The " . $this->instrument . "is a " . $this->classification . "instrument.";
+    }
+};
+
+$Guitar = new MusicalInstrument("guitar", "strings");
+var_dump($Guitar);
+echo "<br>";
+
+$Drum = new MusicalInstrument("drum", "percussion");
+var_dump($Drum);
+echo "<br>";
+
+$Trumpet = new MusicalInstrument("trumpet", "brass");
+var_dump($Trumpet);
+echo "<br>";
+
+// echo $guitar->message() . "<br>";
+// echo $drum->message() . "<br>";
+// echo $trumpet->message() . "<br>";
+echo "<br>";
 
 $nullValue = null;
-var_dump($nullValue);
+echo "• "; var_dump($nullValue);
 echo "is a special value that can be assigned to a variable to indicate that it has no value or does not point to anything. " . "<br>";
 
 // B)
-echo " <p> ★ What type of data are the following variables? </p>";
+echo " <h4> ★ What type of data are the following variables? </h4>";
 // Easy
 $nombre = "Luna";
 var_dump($nombre);
