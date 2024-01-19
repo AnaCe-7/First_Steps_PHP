@@ -98,6 +98,6 @@ echo "<br>";
 
 $presento_examen = (bool) 1;
 var_dump($presento_examen);
-echo "<br>";
+echo "<br>" . "<br>";
 
 ?>
