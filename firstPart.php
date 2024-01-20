@@ -64,6 +64,9 @@ echo "<br>" . "<br>";
 // echo $drum->message() . "<br>";
 // echo $trumpet->message() . "<br>";
 
+define("PI", 3.1415);
+echo "• I defined a constant named PI whose value is: " . PI . "<br>" . "<br>";
+
 $nullValue = null;
 echo "• "; var_dump($nullValue);
 echo "is a special value that can be assigned to a variable to indicate that it has no value or does not point to anything. " . "<br>";
