@@ -60,9 +60,9 @@ $Trumpet = new MusicalInstrument("trumpet", "brass");
 var_dump($Trumpet);
 echo "<br>" . "<br>";
 
-// echo $guitar->message() . "<br>";
-// echo $drum->message() . "<br>";
-// echo $trumpet->message() . "<br>";
+echo $Guitar->message() . "<br>";
+echo $Drum->message() . "<br>";
+echo $Trumpet->message() . "<br>" . "<br>";
 
 define("PI", 3.1415);
 echo "• I defined a constant named PI whose value is: " . PI . "<br>" . "<br>";
@@ -102,5 +102,21 @@ echo "<br>";
 $presento_examen = (bool) 1;
 var_dump($presento_examen);
 echo "<br>" . "<br>";
+
+// Difficul
+$numero_preguntas = 5 + "5";
+var_dump($numero_preguntas);
+echo "<br>";  
+
+$numero_respuestas = "5" + 5;
+var_dump($numero_respuestas);
+echo "<br>";  
+
+$promedio_maximo = $numero_respuestas / 1.0;
+var_dump($promedio_maximo);
+
+$nargles = 3 + "5 nargles"; 
+var_dump($nargles); // integer - but alerts for non-numeric characters
+echo "<br>"; 
 
 ?>
