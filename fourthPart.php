@@ -91,4 +91,53 @@ function convertsUppercase($array) {
 }; 
 print_r(convertsUppercase($myText));
 
+
+echo "<p>• Create a function that receives an array of names and converts the first letter of each name to uppercase </p>";
+$namesArray = array("atefa", "cecilia", "sebastian", "elodie", "valentina");
+function capitalizeFirsLetter($array) {
+//   return array_map(ucwords($array)); 
+};
+print_r(capitalizeFirsLetter($namesArray));
+
+
+echo "<p>• Create a car class with its attributes, where one of the attributes can be an array type </p>";
+class Car {
+    public $brand;
+    public $model;
+    public $color;
+    public $doors;
+    public $system = ["engines", "transmission", "brakes"];
+
+    public function __construct($brand, $model, $color, $doors, $system) {
+        $this->brand = $brand;
+        $this->color = $color;
+        $this->doors = $doors;
+        $this->model = $model;
+        $this->system = $system;
+      }
+      public function brand() {
+        return "Car's brand: " . $this->brand;
+      }
+
+      public function doors() {
+        return  "Number of doors: " . $this->doors ." doors";
+      }
+
+    //   public function system() {
+    //     return "Car system: " . $this->system;
+    //   }
+};
+
+$myCar = new Car("Jeep", "Wrangler", "red", "2", ["gasoline", "manual", "ABS brakes"]);
+print_r($myCar);
+
+echo "<p>• I call the function that returns the car mark </p>";
+echo $myCar->brand();
+
+echo "<p>• I call the function that returns the number of doors the car has </p>";
+echo $myCar->doors();
+
+echo "<p>• I call the function that returns an attribute of the array </p>";
+echo $myCar->system[2];
+
 ?>
