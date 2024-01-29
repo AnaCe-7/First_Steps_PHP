@@ -32,10 +32,10 @@ print_r($concatenation);
 echo "<p> ★ Functions <p>";
 
 echo "<p>• Create a function that prints on console and screen all the numbers of an array in a list </p>";
-$arrayNumbers = array(1, 2, 3, 4, 5); // This is an indenumed array, where the first item has the key 0, the second has the key 1, and so on.
+$arrayNumbers = array(1, 2, 3, 4, 5);
 echo "List of the elements of my array: " . "<br>";
 function recorrerArray($arrayNumbers) {
-    foreach ($arrayNumbers as $value) { // $value --> the value of the current array element
+    foreach ($arrayNumbers as $value) { 
         echo "- " . $value . "<br>";
     }
 };
@@ -106,7 +106,7 @@ class Car {
     public $model;
     public $color;
     public $doors;
-    public $system = ["engines", "transmission", "brakes"];
+    public $system = array("engines", "transmission", "brakes");
 
     public function __construct($brand, $model, $color, $doors, $system) {
         $this->brand = $brand;
@@ -115,27 +115,24 @@ class Car {
         $this->model = $model;
         $this->system = $system;
       }
-      public function brand() {
-        return "Car's brand: " . $this->brand;
-      }
 
-      public function doors() {
-        return  "Number of doors: " . $this->doors ." doors";
-      }
-
-    //   public function system() {
-    //     return "Car system: " . $this->system;
-    //   }
+      public function set_car($brand, $model, $color, $doors, $system){
+        $this -> brand = $brand;
+        $this -> model = $model;
+        $this -> color = $color;
+        $this -> doors = $doors;
+        $this -> system = $system;
+    }
 };
 
 $myCar = new Car("Jeep", "Wrangler", "red", "2", ["gasoline", "manual", "ABS brakes"]);
-print_r($myCar);
+
 
 echo "<p>• I call the function that returns the car mark </p>";
-echo $myCar->brand();
+echo $myCar->brand;
 
 echo "<p>• I call the function that returns the number of doors the car has </p>";
-echo $myCar->doors();
+echo $myCar->doors;
 
 echo "<p>• I call the function that returns an attribute of the array </p>";
 echo $myCar->system[2];

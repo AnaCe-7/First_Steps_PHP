@@ -18,20 +18,20 @@ echo "• Boolean representing 1: " . ($bool1 ? 'true' : 'false') . "<br>";
 $bool0 = false;
 echo "• Boolean representing 0: " . ($bool0 ? 'true' : 'false') . "<br>" . "<br>";
 
-echo "• Arrays:". "<br>" . "- A snacks array" . "<br>";
-$snacksArray = [
-    "pistachios" => "70",
-    "almonds" => "60",
-    "cashews" => "20",
-    "cookies" => "6",
-    "sandwich" => "2",
-];
-print_r($snacksArray);
-echo "<br>";
-
-echo "- An array of fruits" . "<br>";
+echo "• Arrays:". "<br>" . "-This is an indexed array" . "<br>";
 $fruitsArray = ["mango", "watermelon", "banana", "peach", "apple"];
 print_r($fruitsArray);
+echo "<br>" . "<br>";
+
+$snacksArray = [
+    "pistachios" => "70 grams",
+    "almonds" => "60 grams",
+    "cashews" => "20 grams",
+    "cookies" => "6 packets",
+    "sandwich" => 2,
+];
+echo "-This is an associative array" . "<br>";
+print_r($snacksArray);
 echo "<br>" . "<br>";
 
 echo "• PHP Object:" . "<br>" . "Classes and objects are the two main aspects of object-oriented programming." . "<br>" . "A class is a template for objects, and an object is an instance of a class." ."<br>" ."<br>";
@@ -44,25 +44,25 @@ class MusicalInstrument {
         $this->classification = $classification;
     }
     public function message() {
-        return "The " . $this->instrument . "is a " . $this->classification . "instrument.";
+        return "The " . $this->instrument . " is a " . $this->classification . " instrument.";
     }
 };
 
-$Guitar = new MusicalInstrument("guitar", "strings");
-var_dump($Guitar);
+$guitar = new MusicalInstrument("guitar", "string");
+var_dump($guitar);
 echo "<br>";
 
-$Drum = new MusicalInstrument("drum", "percussion");
-var_dump($Drum);
+$drum = new MusicalInstrument("drum", "percussion");
+var_dump($drum);
 echo "<br>";
 
-$Trumpet = new MusicalInstrument("trumpet", "brass");
-var_dump($Trumpet);
+$trumpet = new MusicalInstrument("trumpet", "brass");
+var_dump($trumpet);
 echo "<br>" . "<br>";
 
-echo $Guitar->message() . "<br>";
-echo $Drum->message() . "<br>";
-echo $Trumpet->message() . "<br>" . "<br>";
+echo $guitar->message() . "<br>";
+echo $drum->message() . "<br>";
+echo $trumpet->message() . "<br>" . "<br>";
 
 define("PI", 3.1415);
 echo "• I defined a constant named PI whose value is: " . PI . "<br>" . "<br>";
@@ -73,10 +73,8 @@ echo "is a special value that can be assigned to a variable to indicate that it 
 
 // B)
 echo " <h4> ★ What type of data are the following variables? </h4>";
-// Easy
 $nombre = "Luna";
-var_dump($nombre);
-echo "<br>"; 
+echo "The value of the variable \$nombre is " . $nombre . "," . " and it is a → " . gettype($nombre) . " type of data" . "<br>";
 
 $apellido = "Lovegood";
 var_dump($apellido);
@@ -90,7 +88,7 @@ $Ravenclaw = true;
 var_dump($Ravenclaw);
 echo "<br>" . "<br>";
 
-// Average
+
 $promedio = (8 + 9.5 + 9 + 10 + 8) / 5;
 var_dump($promedio);
 echo "<br>";  
@@ -103,7 +101,7 @@ $presento_examen = (bool) 1;
 var_dump($presento_examen);
 echo "<br>" . "<br>";
 
-// Difficul
+
 $numero_preguntas = 5 + "5";
 var_dump($numero_preguntas);
 echo "<br>";  
