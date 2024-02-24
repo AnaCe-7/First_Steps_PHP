@@ -1,4 +1,5 @@
 <?php
+echo '<button><a href="index.php">Home </a></button>';
 
 echo "<p> ★ Arrays <p>";
 

@@ -1,5 +1,7 @@
 <?php
 
+echo '<button><a href="index.php">Home </a></button>';
+
 echo " <h4> ★ Third Part: </h4>";
 echo "<p>• Convert all characters of the string to uppercase and print on the screen, without modifying the original variable </p>";
 $myString = "I can change all the letters of a string";

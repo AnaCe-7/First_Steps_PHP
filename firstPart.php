@@ -1,5 +1,7 @@
 <?php
 
+echo '<button><a href="index.php">Home </a></button>';
+
 // A)
 echo " <h4> ★ Variables </h4>";
 
