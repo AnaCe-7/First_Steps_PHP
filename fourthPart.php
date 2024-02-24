@@ -26,7 +26,6 @@ echo "Note: array_push() will generate a warning if the first argument is not an
 echo "<p>• Create a new array and concatenate it with the previous one and print it on the screen </p>";
 $otherArray = array("butterfly", "dragonfly", "ladybug");
 $concatenation = array_merge($myArray, $otherArray);
-echo "<br>Concatenation of two arrays" . "<br>";
 print_r($concatenation);
 
 
@@ -35,12 +34,12 @@ echo "<p> ★ Functions <p>";
 echo "<p>• Create a function that prints on console and screen all the numbers of an array in a list </p>";
 $arrayNumbers = array(1, 2, 3, 4, 5);
 echo "List of the elements of my array: " . "<br>";
-function recorrerArray($arrayNumbers) {
+function showArray($arrayNumbers) {
     foreach ($arrayNumbers as $value) { 
         echo "- " . $value . "<br>";
     }
 };
-recorrerArray($arrayNumbers);
+showArray($arrayNumbers);
 
 
 echo "<p>• Create a function that adds a number to the array </p>";
@@ -52,7 +51,7 @@ addNumber($arrayNumbers);
 
 
 echo "<p>• Create a function that removes even numbers from that array </p>";
-echo "There are no more even numbers left in my array, the remaining numbers are: " . "<br>";
+echo "There are no more even numbers left in my array, the remaining are odd numbers: " . "<br>";
 function removeTheEven($arrayNumbers) {
     foreach ($arrayNumbers as $array) {
         if ($array % 2 ==0) continue;
@@ -78,27 +77,29 @@ function findLowest($array) {
 print_r(findLowest($arrayNumbers));
 
 
-echo "<p>• Create a function that converts all letters in a text to lowercase. </p>";
-$myText = "tHe TEXT sTorEd in THIS variAble has bEen MoDifieD";
+echo "<p>• Create a function that converts all letters in a text to lowercase. • Create a function that converts all the letters in a text to uppercase </p>";
+
+$myText = "tHiS TEXT WiLL BE MoDifieD";
 function convertsLowercase($array) {
     return strtolower($array);
-}; 
-print_r(convertsLowercase($myText));
+};
 
-
-echo "<p>• Create a function that converts all the letters in a text to uppercase </p>";
 function convertsUppercase($array) {
     return strtoupper($array);
 }; 
-print_r(convertsUppercase($myText));
+
+echo "Original text: " . $myText . "<br>";
+echo "Modified text to lowercase: " . convertsLowercase($myText) . "<br>";
+echo "Modified text to uppercase: " . convertsUppercase($myText);
 
 
 echo "<p>• Create a function that receives an array of names and converts the first letter of each name to uppercase </p>";
 $namesArray = array("atefa", "cecilia", "sebastian", "elodie", "valentina");
-function capitalizeFirsLetter($array) {
-//   return array_map(ucwords($array)); 
+function capitalizeFirstLetter($array) {
+    return array_map('ucfirst', $array);
 };
-print_r(capitalizeFirsLetter($namesArray));
+
+print_r(capitalizeFirstLetter($namesArray));
 
 
 echo "<p>• Create a car class with its attributes, where one of the attributes can be an array type </p>";
@@ -107,7 +108,7 @@ class Car {
     public $model;
     public $color;
     public $doors;
-    public $system = array("engines", "transmission", "brakes");
+    public $system = [];
 
     public function __construct($brand, $model, $color, $doors, $system) {
         $this->brand = $brand;
@@ -115,27 +116,31 @@ class Car {
         $this->doors = $doors;
         $this->model = $model;
         $this->system = $system;
-      }
+    }
 
-      public function set_car($brand, $model, $color, $doors, $system){
-        $this -> brand = $brand;
-        $this -> model = $model;
-        $this -> color = $color;
-        $this -> doors = $doors;
-        $this -> system = $system;
+    public function get_brand() {
+        return $this->brand;
+    }
+
+    public function get_number_doors() {
+        return $this->doors;
+    }
+
+    public function get_attributes_array() {
+        return $this->system;
     }
 };
 
-$myCar = new Car("Jeep", "Wrangler", "red", "2", ["gasoline", "manual", "ABS brakes"]);
+$myCar = new Car("Jeep", "Wrangler", "red", "2", ["gasoline", "manual transmission", "ABS brakes"]);
 
 
-echo "<p>• I call the function that returns the car mark </p>";
-echo $myCar->brand;
+echo "<p>- Create a function that returns the car mark </p>";
+echo "Brand of the car: " . $myCar->get_brand();
 
-echo "<p>• I call the function that returns the number of doors the car has </p>";
-echo $myCar->doors;
+echo "<p>- Create a function that returns the number of doors the car has </p>";
+echo "Number of doors: " .$myCar->get_number_doors();
 
-echo "<p>• I call the function that returns an attribute of the array </p>";
-echo $myCar->system[2];
+echo "<p>- Create a function that returns an attribute of the array </p>";
+echo "Gear shifting: " . $myCar->system[1];
 
 ?>
